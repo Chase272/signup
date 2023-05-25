@@ -1,0 +1,58 @@
+<div class="main">
+  <div class="container-fluid signup rounded">
+    <form class="signup form-group">
+      <h1>Sign Up</h1>
+      <label>Username</label>
+      <input
+        type="text"
+        class="form-control"
+        name="txt"
+        placeholder="User Name"
+        [(ngModel)]="signupObj.username"
+      />
+      <label>Email</label>
+      <input
+        type="email"
+        class="form-control"
+        name="email"
+        placeholder="Email"
+        [(ngModel)]="signupObj.email"
+      />
+      <label>Password </label>
+      <input
+        type="Password"
+        class="form-control"
+        name="Password"
+        placeholder="Password"
+        [(ngModel)]="signupObj.password"
+      />
+      <button class="btn btn-primary" (click)="onSignUp()">Sign Up</button>
+    </form>
+  </div>
+
+  <div class="login container-fluid rounded">
+    <form>
+      <h1>Login</h1>
+      <label>Email Adderss</label>
+      <input
+        type="email"
+        class="form-control"
+        name="email"
+        placeholder="Email"
+        [(ngModel)]="loginObj.email"
+      />
+      <label>Password</label>
+      <input
+        type="Password"
+        class="form-control"
+        name="Password"
+        placeholder="Password"
+        [(ngModel)]="loginObj.password"
+      />
+
+      <button class="btn btn-primary" (click)="onLogin()">Login</button>
+    </form>
+  </div>
+</div>
+
+<app-profile [user]="loggedInUser"></app-profile>
